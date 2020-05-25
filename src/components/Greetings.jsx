@@ -1,6 +1,6 @@
-import React, { Children } from 'react';
+import React from 'react';
 
-import './greetings.css'
+import './generalText.css'
 
 const Greetings = props => {
   const { lang, children } = props;
@@ -23,8 +23,9 @@ const Greetings = props => {
     default:  
       welcomeMessage = 'Hello'; 
   }
+
   return (
-    <div class="greetings">
+    <div class="generalTextBox">
       <p>{welcomeMessage} {children}</p>
     </div>
   )

@@ -13,7 +13,6 @@ const IdCard = props => {
         <p><strong>Gender:</strong> {gender}</p>
         <p><strong>Height:</strong> {height}</p>
         <p><strong>Birth Date:</strong> {birth.toString().slice(0,15)}</p>
-
       </div>
     </div>
   )
