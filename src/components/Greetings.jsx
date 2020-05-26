@@ -25,7 +25,7 @@ const Greetings = props => {
   }
 
   return (
-    <div class="generalTextBox">
+    <div className="generalTextBox">
       <p>{welcomeMessage} {children}</p>
     </div>
   )

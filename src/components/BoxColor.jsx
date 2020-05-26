@@ -6,7 +6,7 @@ const BoxColor = props => {
  
 
   return (
-    <div class="generalTextBox" style={{backgroundColor: `rgb(${r},${g},${b})`}}>
+    <div className="generalTextBox" style={{backgroundColor: `rgb(${r},${g},${b})`}}>
       <p>rgb({r},{g},{b})</p>
     </div>
   )  
