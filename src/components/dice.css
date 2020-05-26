@@ -1,0 +1,8 @@
+.dice {
+  margin: 1em auto;
+}
+
+.dice > img {
+  width: 35em;
+}
+

@@ -1,32 +1,42 @@
 import React, { Component } from 'react';
 
+import './dice.css';
+
 class Dice extends Component {
   constructor() {
     super();
     this.state = {
-      img: ['/img/dice-empty.png']
+      clicked: false,
+      img: ['/img/dice6.png']
     };
   }
 
   randomDice = () => {
+    const emptyDice = '/img/dice-empty.png';
     const arrayDice = [
       '/img/dice1.png',
       '/img/dice2.png',
       '/img/dice3.png',
       '/img/dice4.png',
       '/img/dice5.png',
-      '/img/dice5.png',
+      '/img/dice6.png',
     ];
-    let newDice = Math.floor(Math.random() * (arrayDice.length + 1))
-    console.log(this.state.img)
-    this.setState = {
-      img: this.state.img.splice(0, 1, arrayDice[newDice])
-    }
+    this.setState({
+      img: emptyDice
+    })
+
+    setTimeout(() => {
+      arrayDice.sort(() => 0.5 - Math.random());
+      this.setState({
+        img: arrayDice[0]
+      });
+    }, 1000)
+    
   };
 
   render() {
     return (
-      <div>
+      <div className="dice">
         <img src={this.state.img} alt="dice" onClick={this.randomDice} />
       </div>
     );
